@@ -1,7 +1,7 @@
 package com.coinvillage.backend.domain.auth.signup;
 
 import com.coinvillage.backend.domain.user.User;
-import com.coinvillage.backend.domain.user.UserRepository;
+import com.coinvillage.backend.domain.user.repository.UserRepository;
 import com.coinvillage.backend.web.auth.signup.SignupRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

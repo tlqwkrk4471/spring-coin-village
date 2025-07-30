@@ -19,6 +19,7 @@ public class Order {
     private Coin coin;
     private Integer price;
     private Long quantity;
+    private Long filledQuantity;
     private OrderSide orderSide;
     private OrderType orderType;
     private OrderStatus orderStatus;
@@ -36,6 +37,7 @@ public class Order {
         this.coin = coin;
         this.price = price;
         this.quantity = quantity;
+        this.filledQuantity = 0L;
         this.orderSide = orderSide;
         this.orderType = orderType;
         this.orderStatus = OrderStatus.PENDING;

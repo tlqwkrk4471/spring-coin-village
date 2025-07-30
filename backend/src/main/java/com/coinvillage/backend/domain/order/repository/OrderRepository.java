@@ -17,6 +17,8 @@ public interface OrderRepository {
     List<Order> findAll();
     List<Order> findActiveOrdersByCoin(Coin coin);
     List<Order> findActiveOrdersByUser(User user);
+    List<Order> findFilledOrdersByCoin(Coin coin);
+    List<Order> findFilledOrdersByUser(User user);
     void update(Order order);
     void delete(Order order);
     void clear();

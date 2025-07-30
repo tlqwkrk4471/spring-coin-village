@@ -1,7 +1,7 @@
 package com.coinvillage.backend.web.user;
 
 import com.coinvillage.backend.domain.user.User;
-import com.coinvillage.backend.domain.user.UserService;
+import com.coinvillage.backend.domain.user.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,9 +20,7 @@ public class UserController {
 
     @GetMapping("/wallet/coin")
     public Long getCoinBalance(@SessionAttribute(name = "loginUser", required = false) User loginUser) {
-        if (loginUser == null) {
-            return null;
-        }
+        if (loginUser == null) return null;
 
         return null;
         //return loginUser.getWallet().getCoinBalance();
@@ -30,10 +28,7 @@ public class UserController {
 
     @GetMapping("/wallet/cash")
     public Long getCashBalance(@SessionAttribute(name = "loginUser", required = false) User loginUser) {
-        if (loginUser == null) {
-            return null;
-        }
-
+        if (loginUser == null) return null;
         return loginUser.getWallet().getCashBalance();
     }
 }

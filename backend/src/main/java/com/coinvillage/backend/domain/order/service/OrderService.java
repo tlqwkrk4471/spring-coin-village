@@ -13,4 +13,6 @@ public interface OrderService {
     Boolean cancelOrder(UUID id);
     List<Order> getActiveOrdersByUser(User user);
     List<Order> getActiveOrdersByCoin(Coin coin);
+    List<Order> getFilledOrdersByUser(User user);
+    List<Order> getFilledOrdersByCoin(Coin coin);
 }

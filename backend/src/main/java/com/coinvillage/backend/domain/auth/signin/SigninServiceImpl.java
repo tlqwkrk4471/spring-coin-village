@@ -1,10 +1,8 @@
 package com.coinvillage.backend.domain.auth.signin;
 
 import com.coinvillage.backend.domain.user.User;
-import com.coinvillage.backend.domain.user.UserRepository;
+import com.coinvillage.backend.domain.user.repository.UserRepository;
 import com.coinvillage.backend.web.auth.signin.SigninRequest;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

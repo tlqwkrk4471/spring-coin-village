@@ -1,4 +1,6 @@
-package com.coinvillage.backend.domain.user;
+package com.coinvillage.backend.domain.user.repository;
+
+import com.coinvillage.backend.domain.user.User;
 
 import java.util.List;
 import java.util.Optional;

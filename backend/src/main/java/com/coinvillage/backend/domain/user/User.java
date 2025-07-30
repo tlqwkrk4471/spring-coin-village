@@ -14,7 +14,16 @@ public class User {
     private String name;
     private String loginId;
     private String password;
-    private Wallet wallet = new Wallet();
+    private Wallet wallet;
 
-    public User() {}
+    public User() {
+        wallet = new Wallet();
+    }
+
+    public User(String name, String loginId, String password) {
+        this.name = name;
+        this.loginId = loginId;
+        this.password = password;
+        this.wallet = new Wallet();
+    }
 }

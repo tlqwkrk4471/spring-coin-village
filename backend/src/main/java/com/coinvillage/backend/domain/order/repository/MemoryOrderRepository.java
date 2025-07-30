@@ -53,7 +53,7 @@ public class MemoryOrderRepository implements OrderRepository {
         return store.values().stream()
                 .filter(order -> order.getCoin().equals(coin))
                 .filter(order -> order.getOrderStatus() == OrderStatus.PENDING
-                        || order.getOrderStatus() == OrderStatus.PARTIAL)
+                        || order.getOrderStatus() == OrderStatus.PARTIAL_FILLED)
                 .collect(Collectors.toList());
     }
 
@@ -62,7 +62,25 @@ public class MemoryOrderRepository implements OrderRepository {
         return store.values().stream()
                 .filter(order -> order.getUser().equals(user))
                 .filter(order -> order.getOrderStatus() == OrderStatus.PENDING
-                        || order.getOrderStatus() == OrderStatus.PARTIAL)
+                        || order.getOrderStatus() == OrderStatus.PARTIAL_FILLED)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Order> findFilledOrdersByCoin(Coin coin) {
+        return store.values().stream()
+                .filter(order -> order.getCoin().equals(coin))
+                .filter(order -> order.getOrderStatus() == OrderStatus.FILLED
+                        || order.getOrderStatus() == OrderStatus.PARTIAL_FILLED)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Order> findFilledOrdersByUser(User user) {
+        return store.values().stream()
+                .filter(order -> order.getUser().equals(user))
+                .filter(order -> order.getOrderStatus() == OrderStatus.FILLED
+                        || order.getOrderStatus() == OrderStatus.PARTIAL_FILLED)
                 .collect(Collectors.toList());
     }
 

@@ -1,5 +1,6 @@
-package com.coinvillage.backend.domain.user;
+package com.coinvillage.backend.domain.user.repository;
 
+import com.coinvillage.backend.domain.user.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
