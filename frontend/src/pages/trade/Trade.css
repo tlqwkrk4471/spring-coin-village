@@ -1,0 +1,1093 @@
+.trade-container {
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  overflow: hidden;
+}
+
+.trade-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.trade-header-left {
+  display: flex;
+  align-items: center;
+}
+
+.trade-header-right {
+  display: flex;
+  align-items: center;
+}
+
+.trade-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 0;
+}
+
+.trade-user-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trade-welcome {
+  font-size: 0.9rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.trade-username {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.trade-home-btn {
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: #6b7280;
+  color: #fff;
+}
+
+.trade-home-btn:hover {
+  background: #4b5563;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.trade-logout-btn {
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: #2563eb;
+  color: #fff;
+}
+
+.trade-logout-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.trade-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.trade-main {
+  flex: 1;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.trade-content {
+  display: flex;
+  gap: 16px;
+  height: 100%;
+  width: 100%;
+}
+
+.trade-right-section {
+  display: flex;
+  gap: 16px;
+  flex: 5;
+}
+
+/* 주문 섹션 */
+.trade-order-section {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 자산 섹션 */
+.trade-assets-section-main {
+  flex: 2;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 코인 목록 섹션 */
+.trade-coins-section {
+  flex: 2;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+}
+
+.trade-section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 12px 0;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.trade-coins-loading {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  padding: 16px;
+}
+
+.trade-coins-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.trade-coin-item {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.trade-coin-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: #f1f5f9;
+}
+
+.trade-coin-item.selected {
+  background: #dbeafe;
+  border-color: #2563eb;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
+}
+
+.trade-coin-info {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trade-coin-name {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.trade-coin-symbol {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.trade-coin-fullname {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.trade-coin-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.trade-coin-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* 탭 헤더 */
+.trade-tab-header {
+  display: flex;
+  gap: 8px;
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.trade-tab-button {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #6b7280;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.trade-tab-button.active {
+  background: #ffffff;
+  color: #1f2937;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.trade-tab-button:hover:not(.active) {
+  background: #e2e8f0;
+  color: #374151;
+}
+
+.trade-tab-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.trade-order-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.trade-selected-coin {
+  text-align: center;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.trade-selected-coin h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  color: #1f2937;
+}
+
+.trade-current-price {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* 매수/매도 탭 */
+.trade-order-tabs {
+  display: flex;
+  gap: 8px;
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.trade-tab {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #6b7280;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.trade-tab.active {
+  background: #ffffff;
+  color: #1f2937;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.trade-tab:hover:not(.active) {
+  background: #e2e8f0;
+  color: #374151;
+}
+
+/* 주문 타입 선택 */
+.trade-order-type {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.trade-order-type label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.trade-order-type input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #2563eb;
+}
+
+/* 입력 그룹 */
+.trade-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trade-input-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.trade-input-group input {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s;
+}
+
+.trade-input-group input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* 입력 필드와 버튼 컨테이너 */
+.trade-input-with-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.trade-input-with-buttons input {
+  flex: 1;
+  height: 36px;
+}
+
+/* 가격 변동 버튼 */
+.trade-price-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+  height: 62px;
+}
+
+.trade-price-row {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+  height: 28px;
+}
+
+.trade-price-btn {
+  padding: 6px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #374151;
+  font-size: 0.7rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 40px;
+  flex: 1;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.trade-price-btn:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.trade-price-btn:active {
+  background: #e5e7eb;
+  transform: translateY(1px);
+}
+
+/* 수량 변동 버튼 */
+.trade-quantity-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+  height: 62px;
+}
+
+.trade-quantity-row {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+  height: 28px;
+}
+
+.trade-quantity-btn {
+  padding: 6px 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #374151;
+  font-size: 0.7rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 40px;
+  flex: 1;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.trade-quantity-btn:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.trade-quantity-btn:active {
+  background: #e5e7eb;
+  transform: translateY(1px);
+}
+
+/* 주문 버튼 */
+.trade-order-btn {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: auto;
+}
+
+.trade-order-btn.buy {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.trade-order-btn.buy:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.trade-order-btn.sell {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.trade-order-btn.sell:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* 코인 선택 안됨 */
+.trade-no-selection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* 대기 주문 관련 스타일 */
+.trade-pending-loading {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  padding: 16px;
+}
+
+.trade-pending-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  padding-right: 6px;
+  flex: 1;
+  min-height: 0;
+}
+
+.trade-pending-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s;
+  gap: 12px;
+}
+
+.trade-pending-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: #f1f5f9;
+}
+
+.trade-pending-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trade-pending-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trade-pending-side {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.trade-pending-side.buy {
+  background: #059669;
+}
+
+.trade-pending-side.sell {
+  background: #dc2626;
+}
+
+.trade-pending-symbol {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.trade-pending-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.trade-pending-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.trade-pending-label {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.trade-pending-value {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.trade-cancel-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #dc2626;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.trade-cancel-btn:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(220, 38, 38, 0.3);
+}
+
+.trade-no-pending {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  color: #6b7280;
+  text-align: center;
+}
+
+.trade-no-pending-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.trade-no-pending-text {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+  color: #374151;
+}
+
+.trade-no-pending-subtext {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #6b7280;
+}
+
+/* 스크롤바 스타일 */
+.trade-coins-list::-webkit-scrollbar,
+.trade-pending-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.trade-coins-list::-webkit-scrollbar-track,
+.trade-pending-list::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.trade-coins-list::-webkit-scrollbar-thumb,
+.trade-pending-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.trade-coins-list::-webkit-scrollbar-thumb:hover,
+.trade-pending-list::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .trade-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .trade-header {
+    padding: 8px 16px;
+  }
+  
+  .trade-title {
+    font-size: 1.3rem;
+  }
+  
+  .trade-main {
+    padding: 16px;
+  }
+} 
+
+.trade-price-buttons, .trade-quantity-buttons {
+  width: 120px;
+} 
+
+/* 주문 상세 정보 */
+.trade-order-detail {
+  margin-top: 12px;
+  padding: 16px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  border-left: 4px solid #2563eb;
+}
+
+.trade-detail-header {
+  margin-bottom: 12px;
+}
+
+.trade-detail-header h4 {
+  margin: 0;
+  color: #1e293b;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.trade-detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trade-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.trade-detail-label {
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.trade-detail-value {
+  color: #1e293b;
+  font-size: 0.875rem;
+  font-weight: 600;
+} 
+
+/* 자산 섹션 스타일 */
+.trade-assets-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.trade-assets-section {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.trade-assets-title {
+  margin: 0 0 12px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 8px;
+}
+
+.trade-cash-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trade-cash-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.trade-cash-label {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.trade-cash-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #059669;
+}
+
+.trade-coins-assets {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.trade-coin-asset-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 12px;
+  transition: all 0.2s;
+}
+
+.trade-coin-asset-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.trade-coin-asset-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trade-coin-asset-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trade-coin-asset-symbol {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.trade-coin-asset-name {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.trade-coin-asset-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trade-coin-asset-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.trade-coin-asset-label {
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.trade-coin-asset-value {
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.trade-no-assets {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  padding: 20px;
+}
+
+.trade-total-assets {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.trade-total-amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-top: 2px solid #e5e7eb;
+  margin-top: 8px;
+}
+
+.trade-total-label {
+  font-size: 1rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.trade-total-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+/* 호가창 스타일 */
+.trade-orderbook-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.trade-orderbook-header {
+  text-align: center;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.trade-orderbook-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.trade-orderbook-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.trade-orderbook-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.trade-orderbook-item {
+  display: flex;
+  align-items: center;
+  padding: 4px 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  min-height: 40px;
+}
+
+.trade-orderbook-item.current-price {
+  background: #000000;
+  color: #ffffff;
+  border-radius: 4px;
+  margin: 2px 0;
+}
+
+.trade-orderbook-sell-quantity,
+.trade-orderbook-buy-quantity {
+  flex: 1;
+  height: 32px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.trade-orderbook-sell-quantity {
+  justify-content: flex-end;
+}
+
+.trade-orderbook-buy-quantity {
+  justify-content: flex-start;
+}
+
+@keyframes sellBarAnimation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--bar-width);
+  }
+}
+
+@keyframes buyBarAnimation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--bar-width);
+  }
+}
+
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+  }
+}
+
+.trade-orderbook-quantity-bar {
+  height: 100%;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  opacity: 0.6;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.trade-orderbook-quantity-bar.sell {
+  background: #3b82f6;
+  color: #3b82f6;
+  animation-name: sellBarAnimation;
+  transform-origin: right center;
+}
+
+.trade-orderbook-quantity-bar.buy {
+  background: #ef4444;
+  color: #ef4444;
+  animation-name: buyBarAnimation;
+  transform-origin: left center;
+}
+
+.trade-orderbook-quantity-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: textFadeIn 0.6s ease-out 0.4s both;
+}
+
+.trade-orderbook-quantity-text.sell {
+  color: #1d4ed8;
+  right: 8px;
+}
+
+.trade-orderbook-quantity-text.buy {
+  color: #dc2626;
+  left: 8px;
+}
+
+.trade-orderbook-price {
+  flex: 0 0 120px;
+  text-align: center;
+}
+
+.price-main {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.trade-orderbook-item.current-price .price-main {
+  color: #ffffff;
+}
+
+.trade-orderbook-divider {
+  width: 1px;
+  height: 24px;
+  background-color: #e5e7eb;
+  margin: 0 8px;
+}

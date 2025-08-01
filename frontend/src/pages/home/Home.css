@@ -1,0 +1,753 @@
+.cv-container {
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  overflow: hidden;
+}
+
+.cv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.cv-header-left {
+  display: flex;
+  align-items: center;
+}
+
+.cv-header-right {
+  display: flex;
+  align-items: center;
+}
+
+.cv-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 0;
+}
+
+.cv-user {
+  font-size: 0.9rem;
+  color: #374151;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cv-user-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cv-welcome {
+  font-size: 0.9rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.cv-username {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.cv-logout-btn {
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: #2563eb;
+  color: #fff;
+}
+
+.cv-logout-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.cv-loading {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.cv-auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cv-btn {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: #2563eb;
+  color: #fff;
+}
+
+.cv-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* 대시보드 메인 영역 */
+.cv-main-dashboard {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.cv-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* 대시보드 */
+.cv-dashboard {
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cv-section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e40af;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* 전체 자산 현황 */
+.cv-assets-overview {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+.cv-assets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.cv-asset-card {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s;
+}
+
+.cv-asset-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #f1f5f9;
+}
+
+.cv-asset-icon {
+  font-size: 1.6rem;
+  margin-right: 10px;
+}
+
+.cv-asset-info {
+  flex: 1;
+}
+
+.cv-asset-title {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #6b7280;
+  margin: 0 0 4px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cv-asset-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+/* 콘텐츠 행 - 왼쪽 패널과 오른쪽 패널을 나란히 배치 */
+.cv-content-row {
+  display: flex;
+  gap: 16px;
+  flex: 1;
+  min-height: 0;
+}
+
+/* 왼쪽 패널 */
+.cv-left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-shrink: 0;
+  width: 280px;
+}
+
+/* 액션 버튼 */
+.cv-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cv-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid #e5e7eb;
+}
+
+.cv-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: #f8fafc;
+}
+
+.cv-trade-btn:hover {
+  border-color: #2563eb;
+}
+
+.cv-create-btn:hover {
+  border-color: #2563eb;
+}
+
+.cv-action-icon {
+  font-size: 1.4rem;
+}
+
+.cv-action-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+/* 인기 코인 순위 */
+.cv-popular-coins {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.cv-popular-loading {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  padding: 16px;
+}
+
+.cv-popular-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.cv-popular-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s;
+}
+
+.cv-popular-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #f1f5f9;
+}
+
+.cv-popular-rank {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.cv-popular-info {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cv-popular-name {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  align-items: flex-start;
+}
+
+.cv-popular-symbol {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.cv-popular-fullname {
+  font-size: 0.65rem;
+  color: #6b7280;
+}
+
+.cv-popular-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1px;
+}
+
+.cv-popular-value {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.cv-change {
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+.cv-positive {
+  color: #059669;
+}
+
+.cv-negative {
+  color: #dc2626;
+}
+
+/* 총 자산 유저 순위 섹션 */
+.cv-rankings-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  flex-shrink: 0;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.cv-rankings-loading {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  padding: 16px;
+}
+
+.cv-rankings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+.cv-ranking-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s;
+}
+
+.cv-ranking-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: #f1f5f9;
+}
+
+.cv-ranking-rank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.cv-ranking-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  align-items: flex-start;
+}
+
+.cv-ranking-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: left;
+}
+
+.cv-ranking-assets {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* 코인 보유 현황 섹션 */
+.cv-coins-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.cv-coins-loading {
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  padding: 16px;
+}
+
+.cv-coins-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 6px;
+  max-height: 400px;
+}
+
+.cv-coin-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.cv-coin-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  background: #f1f5f9;
+}
+
+.cv-coin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.cv-coin-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.cv-coin-symbol {
+  background: #2563eb;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 500;
+}
+
+.cv-coin-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cv-coin-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cv-coin-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.cv-coin-value {
+  font-size: 0.75rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.cv-total-value {
+  margin-top: 4px;
+  padding-top: 6px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.cv-total-value .cv-coin-value {
+  color: #2563eb;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* 보유한 코인이 없을 때 */
+.cv-no-coins {
+  text-align: center;
+  padding: 30px 16px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px dashed #d1d5db;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cv-no-coins-icon {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.cv-no-coins-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 4px 0;
+}
+
+.cv-no-coins-subtext {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.cv-visual {
+  display: none;
+}
+
+/* 게스트용 대시보드 */
+.cv-guest-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.cv-guest-welcome {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cv-guest-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cv-guest-subtitle {
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* 게스트용 인기 코인 순위 */
+.cv-popular-coins-guest {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  width: 100%;
+  max-width: 600px;
+}
+
+.cv-popular-coins-guest .cv-popular-name {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.cv-popular-coins-guest .cv-popular-symbol {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.cv-popular-coins-guest .cv-popular-fullname {
+  font-size: 0.65rem;
+  color: #6b7280;
+}
+
+/* 스크롤바 스타일링 */
+.cv-coins-list::-webkit-scrollbar,
+.cv-popular-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.cv-coins-list::-webkit-scrollbar-track,
+.cv-popular-list::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 2px;
+}
+
+.cv-coins-list::-webkit-scrollbar-thumb,
+.cv-popular-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 2px;
+}
+
+.cv-coins-list::-webkit-scrollbar-thumb:hover,
+.cv-popular-list::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+  .cv-content-row {
+    flex-direction: column;
+  }
+  
+  .cv-left-panel {
+    width: 100%;
+    flex-direction: row;
+    gap: 12px;
+  }
+  
+  .cv-actions {
+    flex-direction: row;
+    width: 180px;
+  }
+  
+  .cv-popular-coins {
+    flex: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .cv-header {
+    padding: 10px 16px;
+  }
+  
+  .cv-title {
+    font-size: 1.3rem;
+  }
+  
+  .cv-main-dashboard {
+    padding: 12px;
+  }
+  
+  .cv-assets-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cv-left-panel {
+    flex-direction: column;
+  }
+  
+  .cv-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .cv-action-btn {
+    width: 100%;
+  }
+  
+  .cv-coins-list {
+    max-height: 300px;
+  }
+  
+  /* 게스트 화면 반응형 */
+  .cv-guest-dashboard {
+    padding: 20px 16px;
+  }
+  
+  .cv-guest-title {
+    font-size: 2rem;
+  }
+  
+  .cv-guest-subtitle {
+    font-size: 1rem;
+  }
+} 

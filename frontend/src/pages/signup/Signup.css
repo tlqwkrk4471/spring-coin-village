@@ -1,0 +1,161 @@
+.signup-container {
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+.signup-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.signup-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #444;
+  text-align: left;
+}
+
+.input-with-btn {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.form-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.15s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.form-input::placeholder {
+  color: #aaa;
+}
+
+.check-btn {
+  padding: 0.75rem 1.1rem;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+
+.check-btn:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.check-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.check-btn.checking {
+  background: #6b7280;
+}
+
+.check-btn.success {
+  background: #10b981;
+}
+
+.check-btn.success:hover {
+  background: #059669;
+}
+
+.check-btn.error {
+  background: #ef4444;
+}
+
+.check-btn.error:hover {
+  background: #dc2626;
+}
+
+.error-message {
+  font-size: 0.85rem;
+  color: #ef4444;
+  margin-top: 0.25rem;
+}
+
+.success-message {
+  font-size: 0.85rem;
+  color: #10b981;
+  margin-top: 0.25rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.signup-btn {
+  flex: 1;
+  padding: 0.75rem;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.signup-btn:hover {
+  background: #1d4ed8;
+}
+
+.back-btn {
+  flex: 1;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  color: #666;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.back-btn:hover {
+  background: #e9ecef;
+} 
