@@ -1,6 +1,6 @@
 package com.coinvillage.backend.domain.coin.repository;
 
-import com.coinvillage.backend.domain.coin.Coin;
+import com.coinvillage.backend.domain.coin.entry.Coin;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,6 +1,7 @@
 package com.coinvillage.backend.domain.order;
 
-import com.coinvillage.backend.domain.coin.Coin;
+import com.coinvillage.backend.domain.coin.entry.Coin;
+import com.coinvillage.backend.domain.order.entry.OrderBook;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;

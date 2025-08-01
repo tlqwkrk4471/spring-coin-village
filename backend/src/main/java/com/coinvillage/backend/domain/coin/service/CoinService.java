@@ -1,6 +1,6 @@
 package com.coinvillage.backend.domain.coin.service;
 
-import com.coinvillage.backend.web.coin.CoinResponse;
+import com.coinvillage.backend.domain.coin.dto.CoinResponse;
 
 import java.util.List;
 

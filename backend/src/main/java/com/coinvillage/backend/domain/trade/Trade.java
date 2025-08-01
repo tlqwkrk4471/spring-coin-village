@@ -1,7 +1,7 @@
 package com.coinvillage.backend.domain.trade;
 
-import com.coinvillage.backend.domain.coin.Coin;
-import com.coinvillage.backend.domain.order.Order;
+import com.coinvillage.backend.domain.coin.entry.Coin;
+import com.coinvillage.backend.domain.order.entry.Order;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

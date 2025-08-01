@@ -1,8 +1,8 @@
 package com.coinvillage.backend.domain.coin.service;
 
-import com.coinvillage.backend.domain.coin.Coin;
+import com.coinvillage.backend.domain.coin.entry.Coin;
 import com.coinvillage.backend.domain.coin.repository.CoinRepository;
-import com.coinvillage.backend.web.coin.CoinResponse;
+import com.coinvillage.backend.domain.coin.dto.CoinResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

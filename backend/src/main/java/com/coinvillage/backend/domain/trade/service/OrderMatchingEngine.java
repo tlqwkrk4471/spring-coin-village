@@ -1,6 +1,9 @@
 package com.coinvillage.backend.domain.trade.service;
 
 import com.coinvillage.backend.domain.order.*;
+import com.coinvillage.backend.domain.order.entry.Order;
+import com.coinvillage.backend.domain.order.entry.OrderBook;
+import com.coinvillage.backend.domain.order.entry.OrderType;
 import com.coinvillage.backend.domain.trade.Trade;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

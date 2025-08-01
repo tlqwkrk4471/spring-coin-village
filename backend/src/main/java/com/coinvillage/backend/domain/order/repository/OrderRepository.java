@@ -1,7 +1,7 @@
 package com.coinvillage.backend.domain.order.repository;
 
-import com.coinvillage.backend.domain.coin.Coin;
-import com.coinvillage.backend.domain.order.Order;
+import com.coinvillage.backend.domain.coin.entry.Coin;
+import com.coinvillage.backend.domain.order.entry.Order;
 import com.coinvillage.backend.domain.user.User;
 
 import java.util.List;

@@ -1,35 +1,58 @@
 package com.coinvillage.backend.domain.user.service;
 
-import com.coinvillage.backend.domain.coin.Coin;
 import com.coinvillage.backend.domain.user.User;
+import com.coinvillage.backend.domain.user.dto.UserAssetResponse;
 import com.coinvillage.backend.domain.user.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.coinvillage.backend.domain.coin.dto.UserCoinResponse;
+import com.coinvillage.backend.domain.user.dto.UserResponse;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Map;
+import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
 
-    @Autowired
-    public UserServiceImpl(UserRepository userRepository) {
-        this.userRepository = userRepository;
+    @Override
+    public List<UserAssetResponse> getUserRankingByTotalAsset() {
+        return userRepository.findAll().stream()
+                .filter(user -> !user.getName().equals("system"))
+                .sorted((u1, u2) -> Long.compare(
+                        getTotalAsset(u2), getTotalAsset(u1)))
+                .map(user -> new UserAssetResponse(user.getName(), user.getWallet().getTotalAsset()))
+                .toList();
+    }
+
+    private long getTotalAsset(User user) {
+        long coinValue = user.getWallet().getCoinBalance().entrySet().stream()
+                .mapToLong(entry -> entry.getKey().getCurrentPrice() * entry.getValue())
+                .sum();
+        return coinValue + user.getWallet().getCashBalance();
     }
 
     @Override
     public void initWallet(User user) {
-        user.getWallet().addCash(100000L);
+        user.getWallet().addCash(1000000L);
     }
 
     @Override
     public Long getCashBalance(User user) {
+        if (user == null) return null;
         return user.getWallet().getCashBalance();
     }
 
     @Override
-    public Map<Coin, Long> getCoinBalance(User user) {
-        return user.getWallet().getCoinBalance();
+    public List<UserCoinResponse> getCoinBalance(User user) {
+        if (user == null) return null;
+        return user.getWallet().getCoinBalance().entrySet().stream()
+                .map(entry -> new UserCoinResponse(
+                        entry.getKey().getSymbol(),
+                        entry.getKey().getName(),
+                        entry.getKey().getCurrentPrice(),
+                        entry.getValue()))
+                .toList();
     }
 }

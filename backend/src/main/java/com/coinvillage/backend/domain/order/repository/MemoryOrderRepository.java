@@ -1,8 +1,8 @@
 package com.coinvillage.backend.domain.order.repository;
 
-import com.coinvillage.backend.domain.coin.Coin;
-import com.coinvillage.backend.domain.order.Order;
-import com.coinvillage.backend.domain.order.OrderStatus;
+import com.coinvillage.backend.domain.coin.entry.Coin;
+import com.coinvillage.backend.domain.order.entry.Order;
+import com.coinvillage.backend.domain.order.entry.OrderStatus;
 import com.coinvillage.backend.domain.user.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;

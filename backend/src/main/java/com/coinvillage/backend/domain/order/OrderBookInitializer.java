@@ -1,5 +1,7 @@
 package com.coinvillage.backend.domain.order;
 
+import com.coinvillage.backend.domain.order.entry.Order;
+import com.coinvillage.backend.domain.order.entry.OrderStatus;
 import com.coinvillage.backend.domain.order.repository.OrderRepository;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;

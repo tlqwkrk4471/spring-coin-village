@@ -1,6 +1,6 @@
 package com.coinvillage.backend.domain.user;
 
-import com.coinvillage.backend.domain.coin.Wallet;
+import com.coinvillage.backend.domain.coin.entry.Wallet;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -10,7 +10,7 @@ import lombok.ToString;
 @ToString
 public class User {
 
-    private Long id; //primary key
+    private Long id;
     private String name;
     private String loginId;
     private String password;

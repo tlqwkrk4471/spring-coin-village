@@ -1,9 +1,9 @@
 package com.coinvillage.backend.domain.trade.service;
 
-import com.coinvillage.backend.domain.coin.Coin;
-import com.coinvillage.backend.domain.coin.Wallet;
-import com.coinvillage.backend.domain.order.Order;
-import com.coinvillage.backend.domain.order.OrderStatus;
+import com.coinvillage.backend.domain.coin.entry.Coin;
+import com.coinvillage.backend.domain.coin.entry.Wallet;
+import com.coinvillage.backend.domain.order.entry.Order;
+import com.coinvillage.backend.domain.order.entry.OrderStatus;
 import com.coinvillage.backend.domain.trade.Trade;
 import com.coinvillage.backend.domain.trade.repository.TradeRepository;
 import lombok.RequiredArgsConstructor;
